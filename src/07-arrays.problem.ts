@@ -3,8 +3,17 @@ interface User {
   firstName: string;
   lastName: string;
   role: "admin" | "user" | "super-admin";
-  posts: Post;
+  posts: Post[];
 }
+
+/**
+ * Other solution...
+ * 
+ * interface User {
+ *     ...
+ *     posts: Array<Post>;
+ * }
+ */
 
 interface Post {
   id: number;
