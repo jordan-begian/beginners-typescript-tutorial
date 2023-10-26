@@ -1,7 +1,12 @@
 import { expect, it } from "vitest";
 
 const createCache = () => {
-  const cache = {};
+  const cache: Record<string, string> = {};
+
+  /**
+   * Record<Keys, Type>
+   * https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type
+   */
 
   const add = (id: string, value: string) => {
     cache[id] = value;
